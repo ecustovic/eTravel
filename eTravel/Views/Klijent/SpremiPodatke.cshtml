@@ -1,0 +1,23 @@
+﻿@model eTravel.Models.Klijent.KlijentSpremiModel
+
+<div id="klijents">
+    <h3>Spremanje podataka iz CSV fajla</h3>
+
+    <div class="right">
+        <a asp-action="UcitajPodatke" class="btn btn-primary">Ucitaj</a>
+        <a asp-action="SpremiPodatke" class="btn btn-primary">Spremi</a>
+    </div>
+
+    <h4>Uspjesno je dodano @Model.UspjesnoDodanihKlijenata od ukupno @Model.UkupniBrojKlijenata klijenta.</h4>
+
+    @if (Model.ErrorList.Count > 0)
+    {
+        <h4>Greške:</h4>
+        <ul>
+            @foreach (string error in Model.ErrorList)
+            {
+                <li>@error</li>
+            }
+        </ul>
+    }
+</div>

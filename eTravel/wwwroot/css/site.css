@@ -35,3 +35,15 @@ body {
         display: none;
     }
 }
+
+.cell-150 {
+    width: 150px;
+}
+.imageCell {
+    max-width: 100px;
+}
+
+td.has-error {
+    color: red;
+    font-weight: bold;
+}

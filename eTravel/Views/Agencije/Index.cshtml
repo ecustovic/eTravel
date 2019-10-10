@@ -1,0 +1,45 @@
+﻿@model eTravel.Models.Agencije.AgencijeIndexModel
+
+<div id="agencije">
+    <h3>Agencije Index</h3>
+
+
+    @*<div id="klijentTable">
+            <table class="table table-condensed" id="klijentIndexTable">
+                <thead>
+                    <tr>
+                        <th class="cell-150">Slika</th>
+                        <th>Ime</th>
+                        <th>Prezime</th>
+                        <th>Telefon</th>
+                        <th>Postanski broj</th>
+                        <th>Grad</th>
+                        <th>Iznos</th>
+                        <th>Destinacija</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var k in Model.Klijents)
+                    {
+                        <tr class="assetRow">
+                            <td class="">
+                                <a asp-controller="Klijent" asp-action="Index" asp-route-id="@k.Id">
+                                    <img src="@k.SlikaUrl" class="imageCell" />
+                                </a>
+                            </td>
+                            <td>@k.Ime</td>
+                            <td>@k.Prezime</td>
+                            <td>@k.Telefon</td>
+                            <td>@k.PostanskiBroj</td>
+                            <td>@k.Grad</td>
+                            <td>@k.Iznos</td>
+                            <td>@k.Destinacija</td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>*@
+
+</div>

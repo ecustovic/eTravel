@@ -1,0 +1,48 @@
+﻿@model eTravel.Models.Klijent.KlijentUcitajModel
+
+<div id="klijents">
+    <h3>Prikaz podataka iz CSV fajla</h3>
+
+    <div class="right">
+        <a asp-action="UcitajPodatke" class="btn btn-primary">Ucitaj</a>
+        <a asp-action="SpremiPodatke" class="btn btn-primary">Spremi</a>
+    </div>
+
+
+    <div id="klijentTable">
+        <table class="table table-condensed" id="klijentIndexTable">
+            <thead>
+                <tr>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Telefon</th>
+                    <th>Postanski broj</th>
+                    <th>Grad</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var k in Model.Klijents)
+                {
+                <tr class="assetRow">
+                    <td>@k.Ime</td>
+                    <td>@k.Prezime</td>
+                    <td>@k.Telefon</td>
+                    @if (k.ImaGresku)
+                    {
+                        <td class="has-error">@k.PostanskiBroj</td>
+
+                    }
+                    else
+                    {
+                        <td>@k.PostanskiBroj</td>
+                    }
+                    <td>@k.Grad</td>
+
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
