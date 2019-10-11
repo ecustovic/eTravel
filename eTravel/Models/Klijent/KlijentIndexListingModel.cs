@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace eTravel.Models.Klijent
 {
-    public class AgencijeIndexListingModel
+    public class KlijentIndexListingModel
     {
         public int Id { get; set; }
         public string Ime { get; set; }

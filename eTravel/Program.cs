@@ -21,4 +21,5 @@ namespace eTravel
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
     }
+
 }

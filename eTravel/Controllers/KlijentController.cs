@@ -13,6 +13,7 @@ using System.Text.RegularExpressions;
 
 namespace eTravel.Controllers
 {
+    //Klijent kontroler
     public class KlijentController : Controller
     {
         private IKlijentService _service;
@@ -49,10 +50,11 @@ namespace eTravel.Controllers
             return View();
         }
 
+        //Akcija za ucitavanje podataka
         public IActionResult UcitajPodatke()
         {
             var klijenti = UcitajPodatkeIzCSV();
-            Regex RgxPostanskiBroj = new Regex(@"^\d+$");
+            Regex RgxPostanskiBroj = new Regex(@"^\d+$"); // reg. expression za postanski broj -- ne smije sadrzavati slova
 
             var model = new KlijentUcitajModel()
             {
@@ -70,6 +72,7 @@ namespace eTravel.Controllers
             return View(model);
         }
 
+        //Akcija za spremanje podataka
         public IActionResult SpremiPodatke()
         {
             var model = new Models.Klijent.KlijentSpremiModel();
@@ -99,6 +102,7 @@ namespace eTravel.Controllers
             return View(model);
         }
 
+        //Akcija koja ce parsirati podatke iz upload-ovanog file-a podaci.csv i vratiti podatke o osobama
         private static List<Klijent> UcitajPodatkeIzCSV()
         {
             List<Klijent> klijenti = new List<Klijent>();

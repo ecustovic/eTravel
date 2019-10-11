@@ -16,16 +16,6 @@ namespace eTravelServices
         {
             _context = context;
         }
-        public void Add(Agencije newAgencije)
-        {
-            //var param1 = new SqlParameter("@Ime", newKlijent.Ime);
-            //var param2 = new SqlParameter("@Prezime", newKlijent.Prezime);
-            //var param3 = new SqlParameter("@PostanskiBroj", newKlijent.PostanskiBroj);
-            //var param4 = new SqlParameter("@Grad", newKlijent.Grad);
-            //var param5 = new SqlParameter("@Telefon", newKlijent.Telefon);
-
-            //_context.Klijents.FromSql("AddKlijent @Ime, @Prezime, @PostanskiBroj, @Grad, @Telefon", param1, param2, param3, param4, param5).ToList();
-        }
 
         public IEnumerable<Agencije> GetAll()
         {

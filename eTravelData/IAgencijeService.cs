@@ -9,7 +9,6 @@ namespace eTravelData
     {
         IEnumerable<Agencije> GetAll();
         Agencije GetById(int id);
-        void Add(Agencije newAgencija);
         string GetPutovanje(int id);
     }
 }

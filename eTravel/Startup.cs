@@ -37,8 +37,12 @@ namespace eTravel
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton(Configuration);
+
             services.AddScoped<IKlijentService, KlijentService>();
             services.AddScoped<IAgencijeService, AgencijeService>();
+            services.AddScoped<IPutovanjeService, PutovanjeService>();
+            services.AddScoped<IUplataService, UplataService>();
+
 
             services.AddDbContext<eTravelContext>(options
                 => options.UseSqlServer(Configuration.GetConnectionString("eTravelConnection")));

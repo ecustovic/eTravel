@@ -1,0 +1,32 @@
+﻿@model eTravel.Models.Uplata.UplataIndexModel
+
+<div id="uplate">
+    <h3>Uplate Detail</h3>
+
+
+    <div id="uplateTable">
+        <table class="table table-condensed" id="uplateIndexTable">
+            <thead>
+                <tr>
+                    <th>Datum uplate</th>
+                    <th>Iznos</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var k in Model.Uplate)
+                {
+                    <tr class="assetRow">
+                        <td>@k.DatumUplate</td>
+                        <td>@k.Iznos</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+        <div class="form-group row text-right text-uppercase">
+            <label>Total</label>
+            <p >@Model.Uplate.Sum(i => i.Iznos)</p>
+        </div>
+    </div>
+
+</div>

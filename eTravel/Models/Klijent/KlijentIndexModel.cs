@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace eTravel.Models.Klijent
 {
-    public class AgencijeIndexModel
+    public class KlijentIndexModel
     {
-        public IEnumerable<AgencijeIndexListingModel> Klijents { get; set; }
+        public IEnumerable<KlijentIndexListingModel> Klijents { get; set; }
     }
 }

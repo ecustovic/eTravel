@@ -1,0 +1,56 @@
+﻿@model eTravel.Models.Putovanje.PutovanjeIndexModel
+
+<div id="putovanja">
+    <h3>Putovanja Detail</h3>
+
+
+    <div id="putovanjeTable">
+        <table class="table table-condensed" id="putovanjeIndexTable">
+            <thead>
+                <tr>
+                    <th class="cell-150">Naziv</th>
+                    <th>Destinacija</th>
+                    <th>Max ucesnika</th>
+                    <th>Datum polaska</th>
+                    <th>Datum povratka</th>
+                    <th>Datum bookiranja</th>
+                    <th>Djeca (d/n)</th>
+                    <th>Iznos</th>
+
+
+                </tr>
+            </thead>
+
+                <tbody>
+                    @foreach (var k in Model.Putovanja)
+                    {
+                    <tr class="assetRow">
+                        <td>@k.Naziv</td>
+                        <td>@k.Destinacija</td>
+                        <td>@k.MaxUcesnika</td>
+                        <td>@k.DatumPolaska</td>
+                        <td>@k.DatumPovratka</td>
+                        <td>@k.DatumBookiranja</td>
+                        <td>
+                            @{
+                                if (k.DjecaBool == true)
+                                {
+                                    <p>DA</p>
+
+                                }
+                                else
+                                {
+                                    <p>NE</p>
+
+                                }
+                                                }
+                                            </td>
+                        <td>@k.Iznos</td>
+
+                    </tr>
+                    }
+                </tbody>
+        </table>
+    </div>
+
+</div>
